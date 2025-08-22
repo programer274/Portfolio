@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    
+    background: #1a0d3f;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;   
+}
+
+.navbar {
+    
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 35px;   
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a {
+    background: rgb(2,0,36);
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(77,9,121,1) 46%, rgba(0,212,255,1) 100%);   
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+}
+
+.home-info h1 {
+    font-size: 50px;
+    margin: 10px 0 25px;
+   
+}
+
+.home-info .btn-sci {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .5s;
+    background: rgb(2,0,36);
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(77,9,121,1) 46%, rgba(0,212,255,1) 100%);
+}
+
+.btn:hover {
+    
+        background: linear-gradient(45deg, rgba(0,212,255,1) 0%, rgba(77,9,121,1) 54%, rgba(2,0,36,1) 100%);
+        box-shadow: 0 0 20px rgba(0,212,255,1), 0 0 30px rgba(77,9,121,0.8), 0 0 40px rgba(2,0,36,0.6);
+        transform: scale(1.05);
+        transition: 0.4s ease-in-out;
+      }
+      
+
+.home-info .btn-sci .sci {
+    margin-left: 20px;
+    
+}
+
+.home-info .btn-sci .sci a {
+    display: inline-flex;
+    padding: 8px;
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(77,9,121,1) 46%, rgba(0,212,255,1) 100%);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(0,212,255,0.7); 
+    
+    border-radius: 50%;
+    font-size: 20px;
+    color:#fff ;
+    margin: 0 8px;
+    transition: .5s;
+}
+
+.home-info .btn-sci .sci a:hover {
+    
+        background: linear-gradient(45deg, rgba(0,212,255,1) 0%, rgba(77,9,121,1) 54%, rgba(2,0,36,1) 100%);
+        box-shadow: 0 0 20px rgba(0,212,255,1), 0 0 30px rgba(77,9,121,0.8), 0 0 40px rgba(2,0,36,0.6);
+        transform: scale(1.05);
+        transition: 0.4s ease-in-out;   
+
+}
+.home-img .img-box {
+    overflow: hidden;
+    width: 38vw;
+    height: 38vw;
+    background: linear-gradient(48deg, rgba(2,0,36,1) 0%, rgba(69,16,94,1) 40%, rgba(0,212,255,1) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-img .img-box .img-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.home-img .img-box .img-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; 
+    display: block;
+}
+
+
+.About {
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    padding: 60px 15% 0;   
+    color: #fff;
+}
+.About-info h1 {
+    font-size: 40px;
+    margin: 10px 0 25px;
+    text-align: center;
+
+}
+
+ .About-info .About-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+
+/* Progress Bar */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+    width: 0%;
+    z-index: 1000;
+    transition: width 0.1s ease;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.theme-toggle i {
+    display: none;
+}
+
+.theme-toggle .bx-sun {
+    display: block;
+}
+
+.dark-theme .theme-toggle .bx-sun {
+    display: none;
+}
+
+.dark-theme .theme-toggle .bx-moon {
+    display: block;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4ecdc4;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+}
+
+/* Mobile Navigation */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.dark-theme .hamburger span {
+    background: #fff;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Skills Section */
+.skills {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item i {
+    font-size: 3rem;
+    color: #4ecdc4;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.dark-theme .skill-item,
+.dark-theme .project-card,
+.dark-theme .testimonial-card {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.dark-theme .skill-item p,
+.dark-theme .project-card p {
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        transition: 0.3s;
+    }
+
+    .dark-theme .nav-links {
+        background: #2d2d2d;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+}
